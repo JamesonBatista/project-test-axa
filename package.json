@@ -1,0 +1,27 @@
+{
+  "name": "project-test-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "delete-results": "(rmdir /s /q \"cypress/reports\" || echo not) && (rmdir /s /q \"cypress/screenshots\" || echo not)",
+    "test": "npm run delete-results && npx cypress run && node cypress/htmlReportChange/read-html.js",
+    "open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "cpf_and_cnpj-generator": "^1.0.5",
+    "cpf-cnpj-validator": "^1.0.3",
+    "cypress-plugin-steps": "^1.1.1",
+    "leite": "^0.2.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^13.6.6",
+    "cypress-mochawesome-reporter": "^3.5.1"
+  }
+}

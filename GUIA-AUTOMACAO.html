@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Cypress para Iniciantes</title>
+    <link rel="stylesheet" href="./GUIA/styles.css">
+</head>
+
+<body>
+
+    <header class="header-background">
+        <h1>Introdução ao Cypress para Iniciantes</h1>
+    </header>
+
+    <section id="indice">
+        <h2>📄Índice</h2>
+        <ul>
+            <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+            <li><a href="#criando-seu-primeiro-projeto">Criando seu primeiro projeto</a></li>
+            <li><a href="#guia-teste-estruturado">Guia para criar um arquivo de teste estruturado</a></li>
+            <li><a href="#executar-teste">Execute seu arquivo de teste criado</a></li>
+        </ul>
+    </section>
+
+    <section id="funcoes-suporte">
+        <h2>📌Funções de Suporte</h2>
+        <ul>
+            <li><a href="#screenshot">screenshot</a></li>
+            <li><a href="#action">action</a></li>
+            <li><a href="#generate_data">generate_data</a></li>
+        </ul>
+    </section>
+
+    <section id="como-criar-um-teste">
+        <h2>💻Como criar um teste</h2>
+        <ul>
+            <li><a href="#exemplo">exemplo</a></li>
+        </ul>
+    </section>
+
+    <section id="pre-requisitos">
+        <h3>📄Pré-requisitos</h3>
+        <p>Tenha instalado <code>Visual Studio Code</code> e o <code>Node.js</code> na sua máquina.</p>
+    </section>
+
+    <section id="criando-seu-primeiro-projeto">
+        <h3>📄Criando seu primeiro projeto</h3>
+        <p><strong>Observação:</strong> Por padrão, subpastas serão criadas dentro do diretório <code>e2e</code> de
+            acordo com o tipo de teste que você está realizando.</p>
+        <ol>
+            <li><strong>Navegue até o Diretório de Testes</strong>
+                <p>Vá até o diretório <code>cypress/e2e</code> dentro do projeto. Este é o local padrão onde o Cypress
+                    espera encontrar seus arquivos de teste.</p>
+                <br>
+                <pre><code>caminhoDoProjeto/cypress/e2e/subpastas</code></pre>
+            </li>
+            <li><strong>Crie o Arquivo de Teste</strong>
+                <p>Crie um novo arquivo com a extensão <code>.cy.js</code>. O nome do arquivo deve descrever o que o
+                    teste vai abordar. Por exemplo:</p>
+                <br>
+                <pre><code>meu_primeiro_teste.cy.js</code></pre>
+            </li>
+        </ol>
+    </section>
+
+    <section id="guia-teste-estruturado">
+        <h3>📄Guia para criar um arquivo de teste estruturado</h3>
+        <p>Neste guia, exploraremos como estruturar e criar rapidamente seu arquivo de teste em Cypress com os snippets
+            personalizados do projeto AXA.</p>
+    </section>
+
+    <section id="teste-completo">
+        <h4>📍Teste completo</h4>
+        <p>Utilize o snippet <code>test_complete</code>para gerar uma estrutura completa de teste.</p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/test_complet.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="titulo-e-teste">
+        <h4>📍Título e teste</h4>
+        <p>Utilize o snippet <code>title</code>para gerar rapidamente um bloco de título e teste.</p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/title.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="bloco-de-teste">
+        <h4>📍Bloco de teste</h4>
+        <p>Para um bloco de teste individual, use o snippet<code>testing</code>.</p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/testing.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="executar-teste">
+        <h3>📄Execute seu arquivo de teste criado</h3>
+
+        <p>Existem duas formas principais de executar seus testes com Cypress: usando o comando
+            <code>npx cypress open</code> para abrir a interface gráfica ou o comando <code>npx cypress run</code> para
+            executar os testes no terminal. Abaixo estão detalhes sobre ambos os métodos.
+        </p>
+
+        <ul>
+            <li><u><strong>Interface Gráfica (GUI)</strong></u></li>
+            <ol>
+                <li><strong>Abra o terminal no diretório do seu projeto.</strong></li>
+                <li><strong>Execute o comando:</strong></li>
+                <figure>
+                    <img src="./GUIA/img/npxcypress.png" alt="Imagem representando o comando bash"
+                        style="width:100%; max-width:500px;">
+                </figure>
+                <li><strong>O Cypress abrirá uma janela mostrando todos os arquivos de teste disponíveis.</strong>
+                    Clique no seu arquivo de teste para executá-lo. Este modo é mais interativo e permite que você veja
+                    os testes sendo executados, bem como qualquer saída ou erro. Veja a seguir:</li>
+                <br>
+                <video style="width:80%; height:auto;" autoplay loop muted playsinline>
+                    <source src="./GUIA/img/executandonpx.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </ol>
+
+            <li><u><strong>Linha de Comando (CLI)</strong></u></li>
+            <ol>
+                <li><strong>Abra o terminal no diretório do seu projeto.</strong></li>
+                <li><strong>Execute o comando:</strong></li>
+                <figure>
+                    <img src="./GUIA/img/npmcypress.png" alt="Imagem representando o comando bash"
+                        style="width:100%; max-width:500px;">
+                </figure>
+                <li><strong>O Cypress executará todos os testes no terminal, sem abrir uma janela gráfica.</strong> Esse
+                    modo é útil para integração contínua e para executar todos os testes de uma só vez sem interação do
+                    usuário.</li>
+            </ol>
+        </ul>
+    </section>
+
+    <section id="screenshot">
+        <h3>📌screenshot</h3>
+
+        <p>Esta função realiza uma captura de tela da página atual e salva com um nome que contém o título do teste
+            atual e a data/hora. Além disso, ela restaura a altura original do html e body após a captura de tela. Para
+            usar essa função em seus testes, utilize o snippet <code>screenshot</code>. Veja
+            como usar a seguir:
+        </p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/screenshots.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="action">
+        <h3>📌action</h3>
+
+        <p>Esta função é uma extensão personalizada do comando <code>cy.get()</code> do Cypress, amplamente utilizado
+            para selecionar um ou mais elementos DOM em testes end-to-end. A ideia por trás da função action é
+            proporcionar testes mais descritivos e fáceis de compreender. Aqui está um guia rápido sobre como usar a
+            função:</p>
+
+        <h4>Parâmetros:</h4>
+
+        <ul>
+            <li><code>text</code>: Uma descrição ou mensagem sobre a ação que está sendo realizada, isso é opcional. Por
+                padrão o <code>text</code> é <strong>action page</strong>.</li>
+            <li><code>atr</code>: <strong>atributo</strong> Este é o mesmo tipo de seletor que você usaria com a
+                função cy.get() padrão do Cypress. Esse atributo sempre vem depois de uma tag de elemento, são essas
+                <strong>input</strong>, <strong>button</strong>, <strong>h3</strong>, <strong>h1</strong>,
+                <strong>id</strong>, <strong>placeholder</strong>, <strong>tabIndex</strong>, <strong>ng-model</strong>,
+                <strong>div</strong>.
+            </li>
+            <li><code>screenshots</code>: Para realizar uma captura de tela da página atual, isso é opcional por padrão
+                vem <strong>false</strong>, para ativar basta passar com <strong>true</strong>.</li>
+        </ul>
+        <p>Utilize o snippet <code>action</code>para gerar rapidamente a função action.</p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/action.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="generate_data">
+        <h3>📌generate_data</h3>
+
+        <p>Esta função retorna um objeto contendo vários tipos de dados gerados aleatoriamente usando a biblioteca
+            faker. É útil para fornecer dados fictícios para os testes. Veja como usar a seguir:</p>
+        </p>
+        <br>
+        <p>Utilize o snippet <code>generate_data</code>para gerar rapidamente a função faker.</p>
+        <br>
+        <video style="width:60%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/generate-data.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+    </section>
+
+    <section id="exemplo">
+        <h3>💻exemplo</h3>
+
+        <p>Veja como criar um teste, e interagir com os elementos de uma página a seguir:</p>
+        <br>
+        <p><strong>📚 Criando subpastas e o arquivo:</strong> Deve criar subpastas dentro do diretório <code>e2e</code>
+            de
+            acordo com o tipo de teste que você está realizando. Também crie um novo arquivo com a extensão
+            <code>.cy.js</code>, o nome do arquivo deve
+            descrever o que o
+            teste vai abordar.
+        </p>
+        <br>
+        <video style="width:80%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/inicio.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <br> </br>
+
+        <p><strong>📚 Inspecionando elemento(HTML) da pagina:</strong> Com o botão direito do mouse, e logo após
+            inspecionar.
+            Como
+            exemplo vamos inspecionar o campo <code>Usuário</code>, <code>Senha</code>, e o botão
+            <code>Entrar</code> do site da Axa.
+        </p>
+        <video style="width:80%; height:auto;" autoplay loop muted playsinline>
+            <source src="./GUIA/img/inspecionar.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <br> </br>
+
+        <p><strong>📚 Criando código:</strong> Como exemplo vamos usar o site da Axa.</p>
+
+        <p>📑<span style="color:brown;"> <strong>- Inspecionando campo</strong></span><code>Usuário</code>:</p>
+        <br>
+        <figure>
+            <img src="./GUIA/img/usuarioHTML.PNG" alt="Imagem representando html USUARIO"
+                style="width:60%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Observe que tem um<code> input Class="from-con..."</code> e tem um atributo
+            <code>id="LoginUsuario"</code>. Este atributo deve ser único, pois se houver mais de um valor para esse
+            atributo na página, pode ocorrer um erro.
+        </p>
+        <p><strong>- Código</strong>:</p>
+        <figure>
+            <img src="./GUIA/img/usuarioCODE.PNG" alt="Imagem representando codigo USUARIO"
+                style="width:50%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Na construção do código, o valor do atributo é passado através da variável
+            <code>user</code> na declaração
+            <code>export let inspect</code>. Esse valor é então utilizado como parâmetro na função <code>action</code>.
+            O comando "type()" é utilizado para preencher um campo com um determinado valor.
+            Por exemplo, ao usar o comando "type('usuario')" em um campo de entrada, o valor 'usuario' será inserido
+            nesse
+            campo.
+        </p>
+        <br>
+        <p>📑<span style="color:brown;"> <strong>- Inspecionando campo</strong></span><code>Senha</code>:</p>
+        <figure>
+            <img src="./GUIA/img/senhaHTML.PNG" alt="Imagem representando html SENHA" style="width:60%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Observe que tem um<code> input Class="from-con..."</code> e tem um atributo
+            <code>id="Password"</code>. Este atributo deve ser único, pois se houver mais de um valor para esse
+            atributo na página, pode ocorrer um erro.
+        </p>
+        <p><strong>- Código</strong>:</p>
+        <figure>
+            <img src="./GUIA/img/senhaCODE.PNG" alt="Imagem representando codigo SENHA" style="width:50%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Na construção do código, o valor do atributo é passado através da variável
+            <code>pass</code> na declaração
+            <code>export let inspect</code>. Esse valor é então utilizado como parâmetro na função <code>action</code>.
+            O comando "type()" é utilizado para preencher um campo com um determinado valor.
+            Por exemplo, ao usar o comando "type('senha')" em um campo de entrada, o valor 'senha' será inserido
+            nesse
+            campo.
+        </p>
+        <br>
+        <p>📑<span style="color:brown;"> <strong>- Inspecionando campo</strong></span><code>Entrar</code>:</p>
+        <figure>
+            <img src="./GUIA/img/entrarHTML.PNG" alt="Imagem representando html ENTRAR" style="width:60%; height:auto;">
+        </figure>
+        <p><strong>-</strong>Observe que tem um<code> button...</code> e tem um atributo
+            <code>class="btn btn-primary"</code>. Este atributo deve ser único, pois se houver mais de um valor para
+            esse
+            atributo na página, pode ocorrer um erro.
+        </p>
+        <p><strong>- Código</strong>:</p>
+        <figure>
+            <img src="./GUIA/img/entrarCODE.PNG" alt="Imagem representando codigo ENTRAR"
+                style="width:50%; height:auto;">
+        </figure>
+        <p><strong>-</strong>Na construção do código, o valor do atributo é passado através da variável
+            <code>button</code> na declaração
+            <code>export let inspect</code>. Esse valor é então utilizado como parâmetro na função <code>action</code>.
+            O comando "click()" é utilizado para simular um clique em um elemento específico.
+            Por exemplo, ao usar o comando "click()" em um botão, o código irá executar a ação de clicar nesse botão.
+        </p>
+        <p><span style="color:rgba(27, 2, 248, 0.74);"> <strong>Observação:</strong></span> Na função
+            <code>action</code> como parâmetro screenshots: true para realizar uma captura de tela.
+        </p>
+        <br>
+        <p>📑<span style="color:brown;"> <strong>- Inspecionando campo</strong></span><code>Status</code>:</p>
+        <figure>
+            <img src="./GUIA/img/statusHTML.PNG" alt="Imagem representando html STATUS" style="width:60%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Observe que tem um <code>select class="from-"...</code> e tem um atributo
+            <code>id="ddlStatus"</code>, e em seguida temos o elemento option com diferentes valores, representando as
+            diversas opções disponíveis para seleção. Este atributo deve ser único, pois se houver mais de um valor para
+            esse
+            atributo na página, pode ocorrer um erro.
+        </p>
+        <p><strong>- Código</strong>:</p>
+        <figure>
+            <img src="./GUIA/img/statusCODE.PNG" alt="Imagem representando codigo STATUS"
+                style="width:50%; height:auto;">
+        </figure>
+        <p><strong>-</strong>Na construção do código, o valor do atributo é passado através da variável
+            <code>status_cadastro</code> na declaração
+            <code>export let inspect</code>. O comando "select()" é utilizado para escolher uma opção em um elemento de
+            seleção específico.
+            Por exemplo, ao usar o comando "select('803')" em um dropdown, o código irá executar a ação de selecionar
+            <code>Cadastrando Conta</code>.
+        </p>
+        <br>
+        <p>📑<span style="color:brown;"> <strong>- Inspecionando
+                    campo</strong></span><code>Nome do Estipulante / Represen</code>:
+        </p>
+        <img src="./GUIA/img/nameHTML.PNG" alt="Imagem representando html NAME" style="width:60%; height:auto;">
+        </figure>
+        <br>
+        <p><strong>-</strong>Observe que tem um <code>input class="from-"...</code> e tem um atributo
+            <code>id="txtNomeEstipulante"</code>. Este atributo deve ser único, pois se houver mais de um valor para
+            esse
+            atributo na página, pode ocorrer um erro.
+        </p>
+        <p><strong>- Código</strong>:</p>
+        <figure>
+            <img src="./GUIA/img/nameCODE.PNG" alt="Imagem representando codigo NAME" style="width:50%; height:auto;">
+        </figure>
+        <p><strong>-</strong>Na construção do código, o valor do atributo é passado através da variável
+            <code>name_represen</code> na declaração
+            <code>export let inspect</code>. Esse valor é então utilizado como parâmetro na função <code>action</code>.
+            O comando "type()" é utilizado para preencher um campo com um determinado valor.
+            Por exemplo, ao usar o comando "type('texto')" em um campo de entrada, o valor 'texto' será inserido
+            nesse
+            campo.
+        </p>
+        <p><span style="color:rgba(27, 2, 248, 0.74);"> <strong>Observação:</strong></span> No "type()" é usado a função
+            <code>let data = generate_data();</code> para fornecer dados fictícios para o teste. Passando
+            <code>data.name()</code>
+            vai gerar um nome Faker.
+        </p>
+        <br>
+        <p><span style="color:rgba(27, 2, 248, 0.74);">
+                <strong>📌Exemplos de como gerar outros dados fictícios usando a função
+                    <code>generate_data</code>:📌</strong></span>
+        </p>
+        <figure>
+            <img src="./GUIA/img/exemplos.PNG" alt="Imagem representando codigo NAME" style="width:50%; height:auto;">
+        </figure>
+    </section>
+</body>
+
+</html>
+<footer>
+    <p>
+    <figure>
+        <img src="./GUIA/img/axa.jpg" alt="Imagem representando o usuario" style="width:10%; height:auto;">
+    </figure>
+    </p>
+</footer>
+
+<script>
+
+</script>
+
+</body>
+
+</html>
